@@ -2,6 +2,7 @@ const data = require("../data/crm.json");
 
 function employeesOfCompanies ( data ) {
   let newData = [];
+
   for ( let i = 0; i < data.companies.length; i++ ) {
     newData.push({
       id:data.companies[i].id,
