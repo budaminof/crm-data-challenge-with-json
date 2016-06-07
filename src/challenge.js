@@ -1,7 +1,6 @@
 const data = require("../data/crm.json");
 
 exports.companies = function ( data ) {
-
   let newData = data.companies.map( company => {
     return {
       id:company.id,
@@ -24,18 +23,15 @@ exports.companies = function ( data ) {
       }
     }
   }
-
+  
   for ( var i = 0; i < newData.length; i++ ) {
     delete newData[i].id
   }
-
   return newData;
 };
 
-
 exports.employments = function (data) {
   let newData = [];
-  
   for ( var i = 0; i < data.people.length; i++ ) {
     for ( var j = 0; j < data.people[i].employments.length; j++ ) {
       for (var k = 0; k < data.companies.length; k++) {
@@ -53,7 +49,6 @@ exports.employments = function (data) {
     }
   }
   return newData;
-
 }
 
 exports.peopleWithoutEmployments = function (data) {
