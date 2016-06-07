@@ -1,5 +1,6 @@
 const expect = require("chai").expect
 const lib = require("../src/challenge")
+const data = require("../data/crm.json");
 
 describe("employeesOfCompanies", () => {
 
